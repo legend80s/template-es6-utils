@@ -1,0 +1,36 @@
+{
+  "name": "template-es6-utils",
+  "version": "1.2.4",
+  "description": "Template for writing utils in ES6 (export default syntax) with babel and test by mocha with sinon.",
+  "main": "./lib/index.js",
+  "types": "./index.d.ts",
+  "scripts": {
+    "compile": "babel src -d lib",
+    "prepublish": "npm test && npm run compile",
+    "test": "mocha"
+  },
+  "keywords": [
+    "template",
+    "es6-boilerplate",
+    "babel",
+    "mochajs",
+    "sinojs",
+    "testing",
+    "utils"
+  ],
+  "author": "legend80s",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/register": "^7.6.2",
+    "git-commit-msg-linter": "^2.3.8",
+    "mocha": "^6.2.2",
+    "sinon": "^7.5.0"
+  },
+  "directories": {
+    "lib": "src",
+    "test": "test"
+  }
+}
