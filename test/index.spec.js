@@ -1,5 +1,8 @@
 import sinon from 'sinon';
 import assert from 'assert';
+
+require('should-sinon');
+
 import { open, addQuery } from '../src';
 
 const legend = global.legend = {
@@ -35,7 +38,7 @@ describe('url-opener', () => {
 
       open(url);
 
-      assert(legend.call.calledWithMatch('startApp', {
+      assert(legend.call.should.be.calledWithMatch('startApp', {
         appId: '20000067',
         param: {
           url: expectedUrl,
